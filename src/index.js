@@ -1,7 +1,7 @@
 import express from "express";
 import handlebars from "express-handlebars";
 
-import homeController from "./controllers/home-controller.js";
+import routes from "./routes.js";
 
 const app = express();
 
@@ -17,15 +17,7 @@ app.set("views", "./src/views");
 
 app.use("/static", express.static("src/public"));
 
-app.use(homeController);
-
-// app.get("/create", (req, res) => {
-//   res.render("create");
-// });
-
-app.get("/details", (req, res) => {
-  res.render("details");
-});
+app.use(routes);
 
 app.listen(3000, () =>
   console.log("Server is listening on http://localhost:3000...")
