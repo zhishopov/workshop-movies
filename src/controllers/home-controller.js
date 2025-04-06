@@ -1,18 +1,18 @@
 import { Router } from "express";
-import movies from "../movies.js";
+import movies from "../movies.js"; // Temporary solution
 
-const router = Router();
+const homeController = Router();
 
-router.get("/", (req, res) => {
+homeController.get("/", (req, res) => {
   res.render("home", { movies });
 });
 
-router.get("/about", (req, res) => {
+homeController.get("/about", (req, res) => {
   res.render("about");
 });
 
-router.get("/search", (req, res) => {
+homeController.get("/search", (req, res) => {
   res.render("search");
 });
 
-export default router;
+export default homeController;
