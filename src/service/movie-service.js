@@ -10,7 +10,6 @@ export default {
     return result;
   },
   create(movieData) {
-    // TODO: add IDs
     const newId = uuid();
 
     movies.push({

@@ -16,7 +16,7 @@ movieController.post("/create", (req, res) => {
   console.log(movieId);
   console.log(newMovie);
 
-  res.end();
+  res.redirect("/");
 });
 
 movieController.get("/:movieId/details", (req, res) => {

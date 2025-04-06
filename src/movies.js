@@ -22,4 +22,16 @@ export default [
     year: "2013",
     category: "Superhero film",
   },
+  {
+    title: "Avengers Endgame",
+    category: "movie",
+    genre: "Adventure",
+    director: "Anthony Russo",
+    year: "2019",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyFjCxRCCtN4Dp2S4s0lO__xLr3qpQueJVfPmZJoB9CW_5b2kF&s",
+    rating: "10",
+    description:
+      "The grave course of events set in motion by Thanos, that wiped out half the universe and fractured the Avengers ranks, compels the remaining Avengers to take one final stand in Marvel Studios' grand conclusion to twenty-two films - Avengers: Endgame. Catastrophe. Confusion. Loss",
+  },
 ];
