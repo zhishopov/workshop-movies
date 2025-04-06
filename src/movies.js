@@ -8,6 +8,7 @@ export default [
     imageUrl: "/static/img/jungle-cruise.jpeg",
     director: "Jaume Collet-Serra",
     year: "2003",
+    category: "Action",
   },
   {
     id: "2",
@@ -19,5 +20,6 @@ export default [
       "https://upload.wikimedia.org/wikipedia/en/5/50/Man_of_Steel_%28film%29_poster.jpg",
     director: "Zack Snyder",
     year: "2013",
+    category: "Superhero film",
   },
 ];
