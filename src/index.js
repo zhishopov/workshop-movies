@@ -23,6 +23,10 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+app.get("/create", (req, res) => {
+  res.render("create");
+});
+
 app.listen(3000, () =>
   console.log("Server is listening on http://localhost:3000...")
 );
