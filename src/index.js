@@ -31,6 +31,10 @@ app.get("/search", (req, res) => {
   res.render("search");
 });
 
+app.get("/details", (req, res) => {
+  res.render("details");
+});
+
 // app.get("*", (req, res) => {
 //   res.render("404");
 // });
