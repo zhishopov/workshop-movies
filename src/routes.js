@@ -13,7 +13,7 @@ routes.get("/details", (req, res) => {
   res.render("details");
 });
 
-// router.get("/hello", (req, res) => {
+// router.get("*", (req, res) => {
 //   res.render("404");
 // });
 
