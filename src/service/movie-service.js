@@ -11,6 +11,16 @@ export default {
       );
     }
 
+    if (result.genre) {
+      result = result.filter(
+        (movie) => movie.genre.toLowerCase() === filter.genre
+      );
+    }
+
+    if (filter.year) {
+      result = result.filter((movie) => movie.year === filter.year);
+    }
+
     return result;
   },
   findMovie(movieId) {
