@@ -1,5 +1,6 @@
 import { v4 as uuid } from "uuid";
 import Movie from "../models/Movie.js";
+import movies from "../movies.js";
 
 export default {
   getAll(filter = {}) {
@@ -23,10 +24,8 @@ export default {
 
     return result;
   },
-  findMovie(movieId) {
-    // TODO: if movie is missing?
-
-    const result = movies.find((movie) => movie.id === movieId);
+  getOne(movieId) {
+    const result = Movie.findById(movieId);
 
     return result;
   },
