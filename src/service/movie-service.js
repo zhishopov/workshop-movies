@@ -4,25 +4,23 @@ import movies from "../movies.js";
 
 export default {
   getAll(filter = {}) {
-    let result = Movie.find({});
+    let query = Movie.find({});
 
-    // if (filter.search) {
-    //   result = result.filter((movie) =>
-    //     movie.title.toLowerCase().includes(filter.search.toLowerCase())
-    //   );
-    // }
+    // TODO: fix partial case insensitive search
+    if (filter.search) {
+      query = query.find({ title: filter.search });
+    }
 
-    // if (result.genre) {
-    //   result = result.filter(
-    //     (movie) => movie.genre.toLowerCase() === filter.genre
-    //   );
-    // }
+    // TODO: add case insensitive search
+    if (filter.genre) {
+      query = query.find({ genre: filter.genre });
+    }
 
-    // if (filter.year) {
-    //   result = result.filter((movie) => movie.year === filter.year);
-    // }
+    if (filter.year) {
+      query = query.find({ year: Number(filter.year) });
+    }
 
-    return result;
+    return query;
   },
   getOne(movieId) {
     const result = Movie.findById(movieId);
