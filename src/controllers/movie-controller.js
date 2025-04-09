@@ -14,14 +14,11 @@ movieController.get("/create", (req, res) => {
   res.render("create");
 });
 
-movieController.post("/create", (req, res) => {
+movieController.post("/create", async (req, res) => {
   const newMovie = req.body;
 
   // Creating a movie
-  const movieId = movieService.create(newMovie);
-
-  console.log(movieId);
-  console.log(newMovie);
+  await movieService.create(newMovie);
 
   res.redirect("/");
 });
