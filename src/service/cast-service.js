@@ -1,12 +1,10 @@
 import Cast from "../models/Cast.js";
 
 export default {
+  getAll() {
+    return Cast.find({});
+  },
   create(castData) {
-    const result = Cast.create({
-      ...castData,
-      age: Number(castData.age),
-    });
-
-    return result;
+    return Cast.create(castData);
   },
 };
